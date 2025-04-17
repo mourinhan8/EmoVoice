@@ -27,11 +27,9 @@
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<div class="text-center">
 	<h2 style="display: flex; align-items: center; justify-content: center">
-		<!-- <object type="image/svg+xml" data="pics/square-f5.svg" style="width: 72px; height: 72px;"></object>-TTS: <span style="margin-left: 10px;"></span>  -->
 		EmoVoice: <span style="margin-left: 10px;"></span> 
 	</h2>
       <h3>LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting</h3>
-      <!-- <h5> <a href="https://github.com/SWivid/F5-TTS" target="_blank" rel="noopener noreferrer">Code</a>; <a href="https://arxiv.org/abs/2410.06885" target="_blank" rel="noopener noreferrer">Paper</a> </h5> -->
 	  <h5>Paper; Code; Dataset</h5>
 	</div>
 	<p><b>Abstract</b> Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and modality-of-thought (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Demo samples are available at <a href="https://anonymous.4open.science/w/EmoVoice-DF55">https://anonymous.4open.science/w/EmoVoice-DF55</a>. Dataset, code, and checkpoints will be released.
@@ -43,8 +41,6 @@
         <li><a href="#model-overview">Model Overview</a></li>
         <li><a href="#English-Samples">English Samples</a></li>
         <li><a href="#Chinese-Samples">Chinese Samples</a></li>
-        <!-- <li><a href="#emotion">Emotion</a></li>
-		<li><a href="#robustness">Robustness</a></li> -->
       </ul>
 	</p>
 
@@ -64,19 +60,17 @@
 	<p style="text-align: left;" >
 		<b>Figure 1</b>: Overview of EmoVoice. LLM receives emotion description and text, autoregressively generating audio token group and phoneme token(optional) in parallel. Audio tokens are converted to waveforms by Vocoder. Input at each decoding step is average embedding of audio token group and phoneme token(optional).
 	</p>
-	<!-- <p>All samples in this demo page are generated with F5-TTS (NFE=32 CFG=2 <i>w/</i> SS) in one time (no cut), with pretrained Vocos as vocoder.</p> -->
 </div>
 
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="English-Samples" style="text-align: center;">English emotion-controllable TTS</h2>
-	<!-- <p>Prompt and text from the demo page of <a href="https://bytedancespeech.github.io/seedtts_tech_report/#full-diffusion-samples" target="_blank" rel="noopener noreferrer">Seed-TTS</a>.</p> -->
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 				<thead>
 				<tr>
 				<th style="vertical-align : middle;text-align: center">Emotion </th>
-				<th style="vertical-align : middle;text-align: center">Emotion Description </th>
+				<th style="vertical-align : middle;text-align: center">Emotion Description</th>
 				<th style="vertical-align : middle;text-align: center">Text</th>
 				<th style="vertical-align : middle;text-align: center">Audio</th>
 				</tr>
@@ -279,7 +273,6 @@
 </div>
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="Chinese-Samples" style="text-align: center;">Chinese emotion-controllable TTS</h2>
-	<!-- <p>Prompt and text from the demo page of <a href="https://bytedancespeech.github.io/seedtts_tech_report/#full-diffusion-samples" target="_blank" rel="noopener noreferrer">Seed-TTS</a>.</p> -->
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 				<thead>
@@ -378,11 +371,6 @@
 						<td style="vertical-align : middle;text-align:center;">在我改变主意之前,在我眼前消失。</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/cry/tx_emotion_00202000301.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 					</tr>
-					<!-- <tr>
-						<td style="vertical-align : middle;text-align:center;">内心内疚，泣不成声，情绪无法控制</td>
-						<td style="vertical-align : middle;text-align:center;">别哭别哭,告诉发生什么事啦? </td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/cry/tx_emotion_00210000124.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>				 -->
 					<tr>
 						<td style="vertical-align : middle;text-align:center;">声音断断续续，口齿不清，难过得哭泣，充满怜悯之心</td>
 						<td style="vertical-align : middle;text-align:center;">你…算啦,麻烦你还是去看看有什么可以避雨的地方。 </td>
@@ -393,11 +381,6 @@
 						<td style="vertical-align : middle;text-align:center;">可是,我们就在同一天之内,少了本校的黄金校草和白金校花。</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/cry/tx_emotion_00207000162.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 					</tr>		
-					<!-- <tr>
-						<td style="vertical-align : middle;text-align:center;">悲哀痛苦，悲伤难过</td>
-						<td style="vertical-align : middle;text-align:center;">由于他有心脏病的原因也就去世了,只剩下我妈和我</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/cry/tx_emotion_00207000113.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>	 -->
 					<tr>
 						<td style="vertical-align : middle;text-align:center;">悲哀痛苦，悲伤难过</td>
 						<td style="vertical-align : middle;text-align:center;">当他死于绞刑架上的时候,比约特再也控制不住自己的悲伤。</td>
@@ -469,11 +452,6 @@
 						<td style="vertical-align : middle;text-align:center;">妈,你在看什么啊?我后面有什么东西吗? </td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/other/tx_emotion_00206000186.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 					</tr>		
-					<!-- <tr>
-						<td style="vertical-align : middle;text-align:center;">心生不满，厌恶。</td>
-						<td style="vertical-align : middle;text-align:center;">而且我当时也不想再见到你!</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/other/disgust/tx_emotion_00302000016.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>	 -->
 					<tr>
 						<td style="vertical-align : middle;text-align:center;">心生不满，厌恶。</td>
 						<td style="vertical-align : middle;text-align:center;">对,就你是知识分子,你好好去你的麻省理工待着,别来烦我。</td>
