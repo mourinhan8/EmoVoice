@@ -32,7 +32,7 @@
       <h3>LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting</h3>
 	  <h5>Paper; Code; Dataset</h5>
 	</div>
-	<p><b>Abstract</b> Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and modality-of-thought (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Demo samples are available at <a href="https://anonymous.4open.science/w/EmoVoice-DF55">https://anonymous.4open.science/w/EmoVoice-DF55</a>. Dataset, code, and checkpoints will be released.
+	<p><b>Abstract</b> Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and chain-of-modality (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Demo samples are available at <a href="https://anonymous.4open.science/w/EmoVoice-DF55">https://anonymous.4open.science/w/EmoVoice-DF55</a>. Dataset, code, and checkpoints will be released.
 	</p>
 
 	<p>
@@ -76,33 +76,6 @@
 				</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td style="vertical-align : middle;text-align:center;" rowspan="5">Happy</td>
-						<td style="vertical-align : middle;text-align:center;">A spontaneous, shared moment of wonder and joy at nature's beauty.</td>
-						<td style="vertical-align : middle;text-align:center;">LOOK at that rainbow! It's breathtaking and perfectly magical.</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_1525_happy_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>
-					<tr>
-						<td style="vertical-align : middle;text-align:center;">Uninhibited joy and freedom found in spontaneous, playful moments.</td>
-						<td style="vertical-align : middle;text-align:center;">Running through the rain, she felt a childlike elation in every drop.</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_1950_happy_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>				
-					<tr>
-						<td style="vertical-align : middle;text-align:center;">Effusing genuine warmth that resonates with a bubbly enthusiasm.</td>
-						<td style="vertical-align : middle;text-align:center;">If this doesn't bring a smile to MY face, nothing will—and it absolutely DID!</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_8863_happy_ballad.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>		
-					<tr>
-						<td style="vertical-align : middle;text-align:center;">Voicing genuine enthusiasm and admiration with vibrant intonation.</td>
-						<td style="vertical-align : middle;text-align:center;">You DID it! The painting is breathtaking, capturing sunlight on waves perfectly.</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_17284_happy_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>		
-					<tr>
-						<td style="vertical-align : middle;text-align:center;">Reflecting a thrilling sense of accomplishment with upbeat vocal inflections.</td>
-						<td style="vertical-align : middle;text-align:center;">We did it—completely aced the project and they loved our ideas!</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_8273_happy_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-					</tr>	
-
 					<tr>
 						<td style="vertical-align : middle;text-align:center;" rowspan="5">Angry</td>
 						<td style="vertical-align : middle;text-align:center;">Reflecting an exasperated, weary annoyance underlined with impatience</td>
@@ -156,7 +129,34 @@
 						<td style="vertical-align : middle;text-align:center;">She said nothing, yet the unsaid screamed into the lingering night.</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/sad/gpt4o_9895_sad_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 					</tr>	
-		
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="5">Happy</td>
+						<td style="vertical-align : middle;text-align:center;">A spontaneous, shared moment of wonder and joy at nature's beauty.</td>
+						<td style="vertical-align : middle;text-align:center;">LOOK at that rainbow! It's breathtaking and perfectly magical.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_1525_happy_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Uninhibited joy and freedom found in spontaneous, playful moments.</td>
+						<td style="vertical-align : middle;text-align:center;">Running through the rain, she felt a childlike elation in every drop.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_1950_happy_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>				
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Effusing genuine warmth that resonates with a bubbly enthusiasm.</td>
+						<td style="vertical-align : middle;text-align:center;">If this doesn't bring a smile to MY face, nothing will—and it absolutely DID!</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_8863_happy_ballad.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Voicing genuine enthusiasm and admiration with vibrant intonation.</td>
+						<td style="vertical-align : middle;text-align:center;">You DID it! The painting is breathtaking, capturing sunlight on waves perfectly.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_17284_happy_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Reflecting a thrilling sense of accomplishment with upbeat vocal inflections.</td>
+						<td style="vertical-align : middle;text-align:center;">We did it—completely aced the project and they loved our ideas!</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/happy/gpt4o_8273_happy_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>	
+					
 					<tr>
 						<td style="vertical-align : middle;text-align:center;" rowspan="5">Disgusted</td>
 						<td style="vertical-align : middle;text-align:center;">Emanating a strong sense of disgust and repulsion in the vocal tone.</td>
