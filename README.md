@@ -1,5 +1,51 @@
-# EmoVoice
+# EmoVoice: LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting
 
-<a href="https://anonymous.4open.science/w/EmoVoice-DF55/">EmoVoice demo page</a>  
-If you find 404 on this page, just refresh it.  There's nothing wrong with the page itself.  
-Or you can just click the Website button on top right corner of the screen.
+## Installation
+
+### Create a separate environment if needed
+
+```bash
+conda create -n EmoVoice python=3.10
+conda activate EmoVoice
+pip install -r requirements.txt
+```
+## Decode with checkpoints
+```bash
+bash examples/tts/scripts/inference_EmoVoice.sh
+bash examples/tts/scripts/inference_EmoVoice-PP.sh
+bash examples/tts/scripts/inference_EmoVoice_1.5B.sh
+```
+## Train from scratch
+```bash
+# Fisrt Stage: Pretrain TTS
+bash examples/tts/scripts/pretrain_EmoVoice.sh
+bash examples/tts/scripts/pretrain_EmoVoice-PP.sh
+bash examples/tts/scripts/pretrain_EmoVoice_1.5B.sh
+
+# Second Stage: Finetune Emotional TTS
+bash examples/tts/scripts/ft_EmoVoice.sh
+bash examples/tts/scripts/ft_EmoVoice-PP.sh
+bash examples/tts/scripts/ft_EmoVoice_1.5B.sh
+```
+
+## Checkpoints
+[EmoVoice](https://drive.google.com/file/d/1WLVshIIaAXtP0wrRPd7KUeomuNIwWL96/view?usp=sharing)  
+[EmoVoice-PP](https://drive.google.com/file/d/1NSDW8dsxXMdwPeoOdmAyiK3ueLgnePnN/view?usp=sharing)
+
+## [Paper](https://arxiv.org/abs/2504.12867); [Demo Page](https://yanghaha0908.github.io/EmoVoice/); [Dataset](https://huggingface.co/datasets/yhaha/EmoVoice-DB)
+
+## Citation
+If our work and codebase is useful for you, please cite as:
+```
+@article{yang2025emovoice,
+  title={EmoVoice: LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting},
+  author={Yang, Guanrou and Yang, Chen and Chen, Qian and Ma, Ziyang and Chen, Wenxi and Wang, Wen and Wang, Tianrui and Yang, Yifan and Niu, Zhikang and Liu, Wenrui and others},
+  journal={arXiv preprint arXiv:2504.12867},
+  year={2025}
+}
+```
+## License
+
+Our code is released under MIT License. The pre-trained models are licensed under the CC-BY-NC license due to the training data Emilia, which is an in-the-wild dataset. Sorry for any inconvenience this may cause.
+
+
