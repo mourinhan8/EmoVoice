@@ -29,8 +29,9 @@ bash examples/tts/scripts/ft_EmoVoice_1.5B.sh
 ```
 
 ## Checkpoints
-[EmoVoice](https://drive.google.com/file/d/1WLVshIIaAXtP0wrRPd7KUeomuNIwWL96/view?usp=sharing)  
-[EmoVoice-PP](https://drive.google.com/file/d/1NSDW8dsxXMdwPeoOdmAyiK3ueLgnePnN/view?usp=sharing)
+- Checkpoints can be found on hugging face: https://huggingface.co/yhaha/EmoVoice
+<!-- [EmoVoice](https://drive.google.com/file/d/1WLVshIIaAXtP0wrRPd7KUeomuNIwWL96/view?usp=sharing)  
+[EmoVoice-PP](https://drive.google.com/file/d/1NSDW8dsxXMdwPeoOdmAyiK3ueLgnePnN/view?usp=sharing) -->
 
 ## Dataset
 

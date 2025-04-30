@@ -32,7 +32,7 @@
       <h3>LLM-based Emotional Text-To-Speech Model with Freestyle Text Prompting</h3>
 	  <h5><a href="https://arxiv.org/abs/2504.12867" target="_blank" rel="noopener noreferrer">Paper</a>; <a href="https://github.com/yanghaha0908/EmoVoice" target="_blank" rel="noopener noreferrer">Code</a>; <a href="https://huggingface.co/datasets/yhaha/EmoVoice-DB" target="_blank" rel="noopener noreferrer">Dataset</a></h5>
 	</div>
-	<p><b>Abstract</b> Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and chain-of-modality (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Demo samples are available at <a href="https://anonymous.4open.science/w/EmoVoice-DF55">https://anonymous.4open.science/w/EmoVoice-DF55</a>. Dataset, code, and checkpoints will be released.
+	<p><b>Abstract</b> Human speech goes beyond the mere transfer of information; it is a profound exchange of emotions and a connection between individuals. While Text-to-Speech (TTS) models have made huge progress, they still face challenges in controlling the emotional expression in the generated speech. In this work, we propose EmoVoice, a novel emotion-controllable TTS model that exploits large language models (LLMs) to enable fine-grained freestyle natural language emotion control, and a phoneme boost variant design that makes the model output phoneme tokens and audio tokens in parallel to enhance content consistency, inspired by chain-of-thought (CoT) and chain-of-modality (CoM) techniques. Besides, we introduce EmoVoice-DB, a high-quality 40-hour English emotion dataset featuring expressive speech and fine-grained emotion labels with natural language descriptions. EmoVoice achieves state-of-the-art performance on the English EmoVoice-DB test set using only synthetic training data, and on the Chinese Secap test set using our in-house data. We further investigate the reliability of existing emotion evaluation metrics and their alignment with human perceptual preferences, and explore using SOTA multimodal LLMs GPT-4o-audio and Gemini to assess emotional speech. Demo samples are available at <a href="https://yanghaha0908.github.io/EmoVoice/">https://yanghaha0908.github.io/EmoVoice/</a>. Dataset, code, and checkpoints will be released.
 	</p>
 
 	<p>
@@ -41,6 +41,7 @@
         <li><a href="#model-overview">Model Overview</a></li>
         <li><a href="#English-Samples">English Samples</a></li>
         <li><a href="#Chinese-Samples">Chinese Samples</a></li>
+		<li><a href="#samesen">Same Text, Different Emotions</a></li>
       </ul>
 	</p>
 
@@ -457,6 +458,99 @@
 						<td style="vertical-align : middle;text-align:center;">对,就你是知识分子,你好好去你的麻省理工待着,别来烦我。</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/ZH/other/disgust/tx_emotion_00302000027.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 					</tr>
+
+				</tbody>
+			</table>
+		</div>
+</div>
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="samesen" style="text-align: center;">Same Text, Different Emotions</h2>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<thead>
+				<tr>
+				<th style="vertical-align : middle;text-align: center">Text</th>
+				<th style="vertical-align : middle;text-align: center">Emotion </th>
+				<th style="vertical-align : middle;text-align: center">Emotion Description </th>
+				<th style="vertical-align : middle;text-align: center">Audio</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="14">Voice is the most natural way of human-computer interaction.</td>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Angry</td>
+						<td style="vertical-align : middle;text-align:center;">Revealing a simmering rage through a tense, irritable growl punctuating each word.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_7282_angry_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Reflecting an exasperated, weary annoyance underlined with impatience</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_16726_angry_ballad.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>				
+			
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Sad</td>
+						<td style="vertical-align : middle;text-align:center;">Projecting a faint, delicate melancholy colored with distant happiness past.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_9634_sad_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Conveying an undercurrent of sadness masked by a seemingly serene demeanor.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_18927_sad_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Happy</td>
+						<td style="vertical-align : middle;text-align:center;">Uninhibited joy and freedom found in spontaneous, playful moments.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_1950_happy_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Reflecting a thrilling sense of accomplishment with upbeat vocal inflections.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_8273_happy_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+	
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Disgusted</td>
+						<td style="vertical-align : middle;text-align:center;">Voicing an intense and lingering disgust, every word dipped in aversion.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_12984_disgusted_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Detailing a revolting invasion that triggers internal repulsion.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_4314_disgusted_ash.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Fearful</td>
+						<td style="vertical-align : middle;text-align:center;">Revealing rising hysteria through a trembling staccato rhythm in speech.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_13867_fearful_ballad.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Filling the conversational gaps with an undercurrent of expectant dread, like a held breath.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_5114_fearful_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Surprised</td>
+						<td style="vertical-align : middle;text-align:center;">Portraying a sense of sudden self-discovery with astonished delight.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_11994_surprised_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Embodying an enchanted surprise, akin to discovering a romantic secret admirer.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_3866_surprised_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Neutral</td>
+						<td style="vertical-align : middle;text-align:center;">Narrating routine, rhythmic footsteps without emotional hue.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_14699_neutral_verse.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">Maintaining an even, steady tone without discernible changes in intensity or emotion.</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/EN/samesen/gpt4o_15540_neutral_sage.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+					</tr>		
+
+
 
 				</tbody>
 			</table>
