@@ -1,0 +1,2 @@
+{"source_text": "Hello world, this is a test.", "target_text": "Hello world, this is a test.", "emotion": "happy", "key": "sample1"}
+{"source_text": "I am feeling a bit sad today.", "target_text": "I am feeling a bit sad today.", "emotion": "sad", "key": "sample2"}

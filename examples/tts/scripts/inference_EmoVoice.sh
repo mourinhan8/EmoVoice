@@ -7,11 +7,11 @@ export PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT=2
 export CUDA_LAUNCH_BLOCKING=1
 
 code_dir=examples/tts
-llm_path="path/to/your/ckpts/Qwen/Qwen2.5-0.5B"
-codec_decoder_path="path/to/your/ckpts/CosyVoice/CosyVoice-300M-SFT"
-ckpt_path=path/to/your/ckpts/EmoVoice
+llm_path="./models/Qwen2.5-0.5B"
+codec_decoder_path="./models/CosyVoice-300M-SFT"
+ckpt_path="./models/EmoVoice"
 split=test
-val_data_path=../test.jsonl
+val_data_path=./test.jsonl
 
 # vocabulary settings
 code_layer=3            # 1 single semantic code layer   2 3 4 5 6 7 8 group semantic code layers 
