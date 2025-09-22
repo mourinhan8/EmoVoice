@@ -1,5 +1,5 @@
 #!/bin/bash
-export PYTHONPATH=$PYTHONPATH:path/to/your/code/EmoVoice/src
+export PYTHONPATH=$PYTHONPATH:./src
 export CUDA_VISIBLE_DEVICES=2
 export TOKENIZERS_PARALLELISM=false
 export OMP_NUM_THREADS=1
