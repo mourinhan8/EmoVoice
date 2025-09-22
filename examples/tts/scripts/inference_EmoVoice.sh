@@ -7,9 +7,9 @@ export PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT=2
 export CUDA_LAUNCH_BLOCKING=1
 
 code_dir=examples/tts
-llm_path="./models/Qwen2.5-0.5B"
-codec_decoder_path="./models/CosyVoice-300M-SFT"
-ckpt_path="./models/EmoVoice"
+llm_path="./models_hf/Qwen2.5-0.5B"
+codec_decoder_path="./models_hf/CosyVoice-300M-SFT"
+ckpt_path="./models_hf/EmoVoice"
 split=test
 val_data_path=./test.jsonl
 

@@ -17,7 +17,7 @@ def download_models() -> str:
         qwen_path = hf_hub_download(
             repo_id=hf_model_paths["llm_path"],
             filename="config.json",
-            cache_dir="./models"
+            cache_dir="./models_hf"
         )
         qwen_dir = os.path.dirname(qwen_path)
         
@@ -26,7 +26,7 @@ def download_models() -> str:
         cosyvoice_path = hf_hub_download(
             repo_id=hf_model_paths["codec_path"],
             filename="configuration.json", 
-            cache_dir="./models"
+            cache_dir="./models_hf"
         )
         cosyvoice_dir = os.path.dirname(cosyvoice_path)
         
@@ -35,7 +35,7 @@ def download_models() -> str:
         emovoice_path = hf_hub_download(
             repo_id=hf_model_paths["ckpt_path"],
             filename="EmoVoice.pt",
-            cache_dir="./models"
+            cache_dir="./models_hf"
         )
         print(f"✅ Models downloaded successfully!\nQwen: {qwen_dir}\nCosyVoice: {cosyvoice_dir}\nEmoVoice: {emovoice_path}")
         
